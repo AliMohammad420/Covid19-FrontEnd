@@ -1,0 +1,61 @@
+
+.recordContainer{
+    min-height: 100vh;
+}
+.recordCard-container{
+    padding: 25px;
+    display: flex;
+    height: max-content;
+}
+
+.lineColor{
+    background-color: #FB2576;
+    color: #FB2576;
+}
+
+.record-heading{
+    text-align: center;
+}
+
+.recordsCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dataContainer{
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+}
+.record-label{
+    font-size: large;
+    font-weight: 600;
+    color: #FB2576;
+}
+
+.date-label{
+    padding-bottom: 5px;
+    border-bottom: grey dashed;
+}
+.delete-btn{
+    padding: 10px;
+    align-self: center;
+    background-color: #1746A2;
+    color: white;
+    border: hidden;
+    border-radius: 2px;
+}
+
+.delete-btn:hover{
+    cursor: pointer;
+}
+
+.unavailable{
+    font-size: xx-large;
+    color: #FB2576;
+    font-weight: 600;
+    text-align: center;
+}

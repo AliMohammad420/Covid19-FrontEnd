@@ -1,0 +1,78 @@
+.main{
+    min-height: 100vh;
+}
+
+
+.statics-heading{
+    text-align: center;
+}
+
+
+.summeryCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+
+
+.countryContainer{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 10px;
+   box-shadow: #dad3d3 0px 0px 10px;
+}
+
+
+
+.line-color{
+    background-color: #FB2576;
+    color: #FB2576;
+}
+
+
+.dataContainer{
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.country-label{
+    font-size: large;
+    font-weight: 600;
+    color: #FB2576;
+}
+
+.date-label{
+    padding-bottom: 5px;
+}
+
+.add-records{
+    padding: 10px;
+    align-self: center;
+    background-color: #1746A2;
+    color: white;
+    border: hidden;
+    
+}
+
+.add-records:hover{
+    cursor: pointer;
+}
+
+.waitingmsg {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FB2576;
+}
+
+
