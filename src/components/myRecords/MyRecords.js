@@ -7,7 +7,7 @@ export const MyRecords = () => {
   const Swal = require('sweetalert2')
 
   const deleteRecords = (id) => {
-    axios.delete(`${process.env.REACT_BACKEND_URL}/covid/${id}`).then((res) => {
+    axios.delete(`https://covid-19-kmv5.onrender.com/covid/${id}`).then((res) => {
       Swal.fire({
         icon: "success",
         title: "Deleted from your records!",
@@ -25,7 +25,7 @@ export const MyRecords = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios.get(`${process.env.REACT_BACKEND_URL}/covid`);
+      const result = await axios.get(`https://covid-19-kmv5.onrender.com/covid`);
       setRecords(result.data);
     };
     fetchData();
@@ -33,24 +33,28 @@ export const MyRecords = () => {
   return (
     <div className="recordContainer">
       <h2 className="record-heading">COVID19 Statics for All Countries</h2>
-      <div className="recordsCard">
-        {records.length > 0 ? records.map((record) => {
+      <div className="my-records-holder">
+        {records.length ? 
+        records?.map((record) => {
           return (
-            <div className="recordCard" key={record._id}>
-              <div className="recordCard__header">
-                <h3 className="recordCard__title">{record.country}</h3>
+            <div key={record.id} className="cardContainer">
+              <div className="line-color">''</div>
+              <div className="dataContainer">
+                <label className="record-label">
+                  Country: {record.country}
+                </label>
+                <label className="date-label">Date: {record.date}</label>
                 <button
-                  className="recordCard__delete"
-                  onClick={() => deleteRecords(record._id)}
+                  className="delete-records"
+                  onClick={() => deleteRecords(record.id)}
                 >
                   Delete
                 </button>
-                
               </div>
             </div>
           );
         }):
-        <label className="unavailable">No Available Records ¯ \ _ (ツ) _ / ¯ </label>
+        <label className="unavailable">No Available Records ¯ \ _ (ツ) _ / ¯</label>
         }
       </div>
     </div>
