@@ -34,22 +34,18 @@ export const MyRecords = () => {
     <div className="recordContainer">
       <h2 className="record-heading">COVID19 Statics for All Countries</h2>
       <div className="recordsCard">
-        {records.length ? 
-        records?.map((record) => {
+        {records.length > 0 ? records.map((record) => {
           return (
-            <div key={record.id} className="recordCard-container">
-              <div className="lineColor">''</div>
-              <div className="dataContainer">
-                <label className="record-label">
-                  Country: {record.country}
-                </label>
-                <label className="date-label">Date: {record.date}</label>
+            <div className="recordCard" key={record._id}>
+              <div className="recordCard__header">
+                <h3 className="recordCard__title">{record.country}</h3>
                 <button
-                  className="delete-btn"
-                  onClick={() => deleteRecords(record.id)}
+                  className="recordCard__delete"
+                  onClick={() => deleteRecords(record._id)}
                 >
                   Delete
                 </button>
+                
               </div>
             </div>
           );
