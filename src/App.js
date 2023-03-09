@@ -1,16 +1,25 @@
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
-import { Main } from "./components/main/Main";
+import { Home } from "./components/home/Home";
+import { Route, Routes } from 'react-router-dom'
+import { MyRecords } from "./components/myRecords/MyRecords";
+import { AllCountries } from "./components/allCountries/AllCountries";
+
 import CovidContextProvider from "./components/context/CovidContext";
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <CovidContextProvider>
-        <Main />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/allCountries" element={<AllCountries />} />
+          <Route path="/myRecords" element={<MyRecords />} />
+        </Routes>
+        <Footer />
       </CovidContextProvider>
-      <Footer />
+
     </div>
   );
 }
