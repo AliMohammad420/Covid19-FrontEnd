@@ -1,0 +1,107 @@
+.main-home-container{
+    min-height: 100vh;
+}
+
+
+.statics-heading{
+    text-align: center;
+    font-weight: 700;
+}
+.statics-container{
+    display: flex;
+    justify-content: space-around;
+}
+.statics{
+    padding: 12px;
+    border: #B2B2B2 solid 1px;
+    border-radius: 4px;
+    width: 200px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    background-color: #FB2576;
+    border: hidden;
+    border-radius: 5px;
+}
+.country-form{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.text-input {
+    padding: 10px;
+    border: #000000 solid 1px;
+    border-radius: 4px;
+    width: 200px;
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.search-country{
+    padding: 10px;
+    border: #000000 solid 1px;
+    border-radius: 4px;
+    width: 100px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    background-color: #1746A2;
+    border: hidden;
+    border-radius: 5px;
+}
+.search-country:hover{
+    cursor: pointer;
+}
+.country-heading{
+    text-align: center;
+}
+.from-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.line-color2{
+    background-color: #FB2576;
+    color: #FB2576;
+}
+.card-container{
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: #dad3d3 0px 0px 10px;
+}
+
+.data-container{
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+.data-country{
+    color: #FB2576;
+    font-weight: 700;
+}
+.cases-country{
+    padding: 1px;
+    
+}
+.card-holder{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 20px;
+    justify-content: center;
+}
+
+.homeContainer{
+    margin-top: 50px;
+}
