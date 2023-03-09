@@ -6,7 +6,7 @@ export const AllCountriesCard = ({
  country,cases, date,death,recovered,
 }) => {
  const add = (country, date) => {
-  axios.post('https://covid-19-kmv5.onrender.com/covid', {
+  axios.post(`${process.env.REACT_BACKEND_URL}/covid`, {
     country,date
   }).then((res) => {
     Swal.fire({
@@ -26,9 +26,6 @@ export const AllCountriesCard = ({
 };
 
  
-
-
-  
  return (
   <div className="countryContainer">
    <div className="line-color">''</div>
